@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const Offer = () => {
     return (
         <>
-            <div className="mt-44 mb-96">
+            <div className="md:mt-32 mt-20 mb-96">
                 <motion.h1 
                 
             initial={{ y: 100, opacity: 0 }}
@@ -15,7 +15,7 @@ const Offer = () => {
             ease: "ease-in",
             duration: 1
             }}
-             className='text-3xl font-bold ml-20'>Offers</motion.h1>
+             className='md:text-3xl text-2xl font-bold md:ml-20 ml-9'>Offers</motion.h1>
                 <motion.p 
              initial={{ y: 100, opacity: 0 }}
              whileInView={{ y: 0, opacity: 1 }}
@@ -26,7 +26,7 @@ const Offer = () => {
              ease: "ease-in",
              duration: 1
              }}    
-            className='text-1xl font-bold ml-20'>Promotions, deals and special offers for you</motion.p>
+            className='text-1xl font-bold md:ml-20 ml-9 md:w-full w-[80vw]'>Promotions, deals and special offers for you</motion.p>
                 <motion.div
                 
             initial={{ y: 100, opacity: 0 }}
@@ -42,14 +42,14 @@ const Offer = () => {
                 
                 
                 className="flex w-full flex-col lg:flex-row">
-                    <div className="card bg-white border border-spacing-5 rounded-box grid h-48 flex-grow ml-20 mt-10">
-                        <h1 className='text-2xl font-bold ml-10 mt-5'>Fly away to your dream holiday</h1>
-                        <p className='text-1xl ml-10 -mt-7'>Get inspired, compare and book flights with more flexibility
+                    <div className="card bg-white border border-3 rounded-box grid md:h-48 h-52 flex-grow md:ml-20 ml-5 mt-10 md:w-full w-[90vw]">
+                        <h1 className='md:text-2xl text-[1.1rem] font-bold ml-10 mt-5 md:w-[30vw] w-[80vw]'>Fly away to your dream holiday</h1>
+                        <p className='text-1xl ml-10 md:-mt-7 mt-2 md:w-[30vw] w-[80vw]'>Get inspired, compare and book flights with more flexibility
                         </p>
-                        <button className='bg-blue-700 text-white rounded-md w-44 hover:bg-blue-300 ml-[30rem] mt-3  hover:text-black mb-3'>Search For Flights</button>
+                        <button className='bg-blue-700 text-white rounded-md w-44 hover:bg-blue-300 md:ml-[30rem] ml-10 md:p-0 p-2 mt-3  hover:text-black mb-3'>Search For Flights</button>
                     </div>
                     <div className="card rounded-box grid h-32 flex-grow place-items- ml-5 mr-20 mt-10">
-                        <div className="card bg-base-100 image-full w-12/12 h-40 shadow-xl">
+                        <div className="card bg-base-100 image-full md:w-[40vw] w-[90vw] h-40 shadow-xl">
                         <figure>
                             <img
                                 src="https://savannaintl.com/wp-content/uploads/2020/12/travel-world-1.jpg"
