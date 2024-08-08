@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <>
-        <div className={`fixed w-full z-50 ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
+        <div className={`fixed w-[100vw] z-50 ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
             <div className="navbar bg-[#001233] text-white">
                 <div className="navbar navbar-start">
                     <div className="dropdown">
