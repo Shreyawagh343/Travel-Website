@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <>
-        <div className={`fixed w-[100vw] z-50 ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
+        <div className={`fixed w-[100vw] z-50 top-0 ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
             <div className="navbar bg-[#001233] text-white">
                 <div className="navbar navbar-start">
                     <div className="dropdown">
@@ -49,8 +49,8 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-blue-950 text-white">
-                            <li><a>Stays</a></li>
-                            <li><a>Flights</a></li>
+                            <li><a href='/'>Stays</a></li>
+                            <li><a href='/flight'>Flights</a></li>
                             <li><a>Flight + Hotel</a></li>
                             <li><a>Car rentals</a></li>
                             <li><a>Attractions</a></li>
@@ -72,11 +72,11 @@ const Navbar = () => {
                 className="navbar bg-[#001233] text-white p-3 pl-56 pt-5 pb-3 gap-5 md:flex hidden">
                 <div className="flex stay hover:bg-blue-950 rounded-full">
                     <img src={stayimg} alt="" />
-                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer ">Stays</button>
+                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer "><a href="/">Stays</a></button>
                 </div>
                 <div className="flex stay hover:bg-blue-950 rounded-full">
                     <img src={flightimg} alt="" />
-                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer">Flights</button>
+                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer"><a href="/flight">Flights</a></button>
                 </div>
                 <div className="flex stay hover:bg-blue-950 rounded-full">
                     <img src={flighthotelimg} alt="" />
