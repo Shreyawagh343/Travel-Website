@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import "./Hero.css"
 import { motion } from "framer-motion"
 import person from "../assets/Images/person.png"
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 const Hero = () => {
   const [Adultcount, setAdultcount] = useState(0)
   const [Childrencount, setChilderncount] = useState(0)
   const [roomcount, setroomcount] = useState(0)
-  const [city, setcity] = useState('')
 
   const handleChangeadult = () => {
     let adult = document.querySelector(".adult")
@@ -90,7 +93,7 @@ const Hero = () => {
         }}
 
         className="btns -mt-10 flex md:flex-row flex-col">
-        <select className="select select-bordered w-full max-w-xs md:ml-80 ml-5 mt-3 text-[1.1rem]">
+        <select className="select select-bordered w-full max-w-xs md:ml-40 ml-5 mt-3 text-[1.1rem]">
           <option disabled selected>Where are you going?</option>
           <option>Han Solo</option>
           <option>Greedo</option>
@@ -108,7 +111,14 @@ const Hero = () => {
             </ul>
           </div>
         </div>
-        <input type="submit" placeholder='Search' className='bg-blue-700 h-12 px-5 text-white text-[1.1rem] border-none rounded-md md:ml-3 ml-5 mt-3 md:w-44 w-44' />
+        <div className="ml-5">
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DemoContainer components={['DatePicker']}>
+                                <DatePicker label="select date" className='bg-white rounded-md' />
+                            </DemoContainer>
+                        </LocalizationProvider>
+                    </div>
+        <input type="submit" placeholder='Search' className='bg-blue-700 h-14 px-5 text-white text-[1.1rem] border-none rounded-md md:ml-3 ml-5 mt-2 md:w-44 w-44 cursor-pointer' />
 
       </motion.div>
     </>

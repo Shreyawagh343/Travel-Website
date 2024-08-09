@@ -57,7 +57,7 @@ const Explore = () => {
       
       
       className="details">
-      <h1 className='md:text-3xl text-2xl font-bold md:ml-20 ml-9'>Explore India</h1>
+      <h1 className='md:text-2xl text-[1.2rem] font-bold md:ml-20 ml-9'>Explore India</h1>
       <p className='md:text-1xl text-[1.1rem] font-bold md:ml-20 ml-9 md:w-full w-[90vw]'>These popular destinations have a lot to offer</p>
       </motion.div>
       <motion.div 

@@ -15,7 +15,7 @@ const Treading = () => {
                 ease: "ease-in",
                 duration: 1
                 }}
-                 className='md:text-3xl text-2xl font-bold md:ml-20 ml-9'>Trending destinations</motion.h1>
+                 className='md:text-2xl text-[1.2rem] font-bold md:ml-20 ml-9'>Trending destinations</motion.h1>
                 <motion.p
 
                 initial={{ y: 100, opacity: 0 }}

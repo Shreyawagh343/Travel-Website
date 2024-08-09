@@ -38,7 +38,7 @@ const Deal = () => {
                         ease: "ease-in",
                         duration: 1
                     }}
-                    className='md:text-3xl text-2xl font-bold md:ml-20 ml-9'>Deals for the weekend</motion.h1>
+                    className='md:text-2xl text-[1.2rem] font-bold md:ml-20 ml-9'>Deals for the weekend</motion.h1>
                 <motion.p
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -50,7 +50,23 @@ const Deal = () => {
                         duration: 1
                     }}
                     className='text-1xl font-bold md:ml-20 ml-9 md:w-full w-[80vw]'>Save on stays for 9 August - 11 August</motion.p>
-                <div className="mt-10">
+                <motion.div 
+
+                 initial={{ y: 150, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{
+                     delay: 0.7,
+                     y: { type: 'spring', stiffness: 60 },
+                     opacity: { duration: 0.2 },
+                     ease: "ease-in",
+                     duration: 1
+                 }}
+                
+                
+                
+                
+                
+                className="mt-10">
                     <Carousel responsive={responsive}>
                         <div><div className="card bg-base-100 w-80 shadow-xl md:ml-24 ml-7 mb-8">
                             <figure>
@@ -237,7 +253,7 @@ const Deal = () => {
                             </div>
                         </div></div>
                     </Carousel>
-                </div>
+                </motion.div>
             </div>
         </>
     )
