@@ -22,7 +22,7 @@ const Login = () => {
               <div className="login"></div>
 
               <button className='w-11/12 h-12 border border-gray-300 rounded-md pl-5 md:ml-5 ml-3 mt-6 text-center text-white bg-blue-600'>Login</button>
-             <button className='w-11/12 h-12 border border-gray-300 rounded-md pl-5 md:ml-5 ml-3 mt-6 text-center text-white bg-blue-600' >Sign-in With Google</button>
+             <button className='w-11/12 h-12 border border-gray-300 rounded-md pl-5 md:ml-5 ml-3 mt-6 text-center text-white bg-blue-600' >Sign-in with Google</button>
               <p className=' md:text-[1rem] text-xs mt-3 md:ml-28 ml-9'>Don't have a account?<Link to="/resigter" className='text-blue-500 pl-2'>Signup</Link></p>
 
                         </form>
