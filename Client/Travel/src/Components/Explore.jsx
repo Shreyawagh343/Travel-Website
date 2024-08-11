@@ -42,7 +42,7 @@ const Explore = () => {
   };
   return (
     <>
-    <div className="md:-mt-80 -mt-56">
+    <div className="">
       <motion.div 
       
       initial={{ y: 100, opacity: 0 }}

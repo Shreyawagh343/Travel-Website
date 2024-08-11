@@ -6,6 +6,7 @@ import taxiimg from "../assets/Images/Taxi.png"
 import flightimg from "../assets/Images/flight.png"
 import flighthotelimg from "../assets/Images/flightsandhotels.png"
 import attractionimg from "../assets/Images/Attraction.png"
+import Login from './Login'
 
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
 
     return (
         <>
-        <div className={`fixed w-[100vw] z-50 top-0 ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
+        <div className={`fixed w-[100vw] z-50 top-0 block ${sticky ? "sticky- shadow-md bg-base-100 duration-300" : ""}`}>
             <div className="navbar bg-[#001233] text-white">
                 <div className="navbar navbar-start">
                     <div className="dropdown">
@@ -51,7 +52,7 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-blue-950 text-white">
                             <li><a href='/'>Stays</a></li>
                             <li><a href='/flight'>Flights</a></li>
-                            <li><a>Flight + Hotel</a></li>
+                            <li><a href='/flightandhotel'>Flight + Hotel</a></li>
                             <li><a>Car rentals</a></li>
                             <li><a>Attractions</a></li>
                             <li><a>Airport Taxis</a></li>
@@ -62,8 +63,9 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                 </div>
                 <div className="navbar-end">
-                    <button className="bg-white p-1 rounded-md mr-5 text-[1rem] md:block hidden text-blue-700 font-bold cursor-pointer hover:bg-slate-200 px-5">Resigter</button>
-                    <button className="bg-white p-1 rounded-md mr-5 text-[1rem] md:block hidden text-blue-700 font-bold cursor-pointer hover:bg-slate-200 px-5">Login</button>
+                    <button className="bg-white p-1 rounded-md mr-5 text-[1rem] md:block hidden text-blue-700 font-bold cursor-pointer hover:bg-slate-200 px-5"><a href="/resigter">Resigter</a></button>
+                    <a className="bg-white p-1 rounded-md mr-5 text-[1rem] md:block hidden text-blue-700 font-bold cursor-pointer hover:bg-slate-200 px-5" onClick={() => document.getElementById('my_modal_3').showModal()}>Login</a>
+                    <Login/>
                 </div>
 
             </div>
@@ -80,7 +82,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex stay hover:bg-blue-950 rounded-full">
                     <img src={flighthotelimg} alt="" />
-                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer">Flight + Hotel</button>
+                    <button className=" ml-1 rounded-md mr-5 text-[1rem] md:block hidden text-white font-bold cursor-pointer"><a href="/flightandhotel">Flight + Hotel</a></button>
                 </div>
                 <div className="flex stay hover:bg-blue-950 rounded-full">
                     <img src={carimg} alt="" />

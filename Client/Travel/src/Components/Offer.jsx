@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const Offer = () => {
     return (
         <>
-            <div className="md:mt-32 mt-20 mb-96">
+            <div className="h-[20rem]">
                 <motion.h1
 
                     initial={{ y: 100, opacity: 0 }}
@@ -15,7 +15,7 @@ const Offer = () => {
                         ease: "ease-in",
                         duration: 1
                     }}
-                    className='md:text-2xl text-[1.2rem] font-bold md:ml-20 ml-9'>Offers</motion.h1>
+                    className='md:text-2xl text-[1.2rem] font-bold md:ml-20 ml-9 mt-48'>Offers</motion.h1>
                 <motion.p
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
