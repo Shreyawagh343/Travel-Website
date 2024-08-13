@@ -4,21 +4,23 @@ import Flights from "./Pages/Home/Flights"
 import FlightAndHotel from "./Pages/Home/FlightAndHotel"
 import Resigter from "./Components/Resigter"
 import Login from "./Components/Login"
-import { useAuth } from "./Context/AuthProvider"
+import { Toaster } from "react-hot-toast" 
+
 
 function App() {
-  const[authUser,setauthUser]=useAuth()
+  
 
   return (
     
     <>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/flight" element={authUser ?<Flights/>:<Navigate to="/login"/>}/>
+      <Route path="/flight" element={<Flights/>}/>
       <Route path="/flightandhotel" element={<FlightAndHotel/>}/>
       <Route path="/resigter" element={<Resigter/>}/>
       <Route path="/login" element={<Login/>}/>
     </Routes>
+    <Toaster/>
    
      
     </>

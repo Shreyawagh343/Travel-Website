@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const Offer = () => {
     return (
         <>
-            <div className="h-[20rem]">
+            <div className="md:h-[20rem] h-[40rem]">
                 <motion.h1
 
                     initial={{ y: 100, opacity: 0 }}

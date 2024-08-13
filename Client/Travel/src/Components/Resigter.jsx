@@ -2,11 +2,33 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import Login from './Login';
+import axios from "axios"
+import toast from "react-hot-toast"
 
 
 const Resigter = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit =(data) => console.log(data)
+    const onSubmit = async (data) =>{
+        const UserInfo = {
+            username:data.username,
+            email:data.email,
+            password:data.password
+        }
+        await axios.post("http://localhost:4001/user/register",UserInfo)
+        .then((res)=>{
+            console.log(res.data)
+            if(res.data){
+            toast('Successfully created!');
+            }
+            localStorage.setItem("user",JSON.stringify(res.data.user))
+        })
+        .catch((err)=>{
+            if(err.response){
+             console.log("Error",err)
+            toast("Error: " + err.response.data.message);
+            }
+        })
+    }
        
     return (
         <>
